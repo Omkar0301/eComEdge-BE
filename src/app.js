@@ -4,6 +4,7 @@ const cors = require('cors');
 const cookieParser = require('cookie-parser');
 const logger = require('./utils/logger');
 const connectDB = require('./config/database');
+const path = require('path');
 const config = require('./config');
 const { errorHandler, errorConverter } = require('./middlewares/errorHandler');
 const { apiLimiter } = require('./middlewares/rateLimiter');
@@ -17,6 +18,7 @@ connectDB();
 app.use(express.json());
 app.use(cookieParser());
 app.use(express.urlencoded({ extended: true }));
+app.use('/uploads', express.static(path.join(__dirname, 'src/uploads')));
 
 // Security middleware
 app.use(helmet());

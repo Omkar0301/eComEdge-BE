@@ -6,6 +6,9 @@
 # Node modules
 node_modules/
 
+# Ignore uploaded images
+src/uploads/
+
 # Logs
 logs/
 *.log
