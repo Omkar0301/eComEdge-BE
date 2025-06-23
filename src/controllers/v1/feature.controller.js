@@ -10,7 +10,7 @@ const featureController = {
   createFeature: async (req, res, next) => {
     try {
       const { name, description } = req.body;
-      const image_url = req.file ? `/uploads/${req.file.filename}` : null;
+      const image_url = req.file ? `/uploads/feature/${req.file.filename}` : null;
 
       const feature = await featureService.createFeature({ name, description, image_url });
       return sendSuccess(res, 'Feature created successfully', feature, {}, status.OK);
@@ -46,7 +46,7 @@ const featureController = {
   updateFeature: async (req, res, next) => {
     try {
       const { name, description } = req.body;
-      const image_url = req.file ? `/uploads/${req.file.filename}` : undefined;
+      const image_url = req.file ? `/uploads/feature/${req.file.filename}` : null;
 
       const updateData = { name, description };
       if (image_url) updateData.image_url = image_url;
