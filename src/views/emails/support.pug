@@ -1,0 +1,56 @@
+doctype html
+html
+  head
+    meta(charset='UTF-8')
+    title eComEdge Support Request
+    style.
+      body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f4f4f4;
+        padding: 20px;
+      }
+      .container {
+        background-color: #ffffff;
+        border-radius: 8px;
+        padding: 20px;
+        max-width: 600px;
+        margin: auto;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      }
+      h2 {
+        color: #2c3e50;
+        border-bottom: 1px solid #eee;
+        padding-bottom: 10px;
+      }
+      .info {
+        margin: 15px 0;
+      }
+      .label {
+        font-weight: bold;
+        display: inline-block;
+        width: 80px;
+        color: #34495e;
+      }
+      .value {
+        color: #2c3e50;
+      }
+      .message-box {
+        background-color: #f9f9f9;
+        padding: 15px;
+        border-left: 4px solid #3498db;
+        white-space: pre-wrap;
+        margin-top: 10px;
+        color: #2c3e50;
+      }
+  body
+    .container
+      h2 New Support Request
+      .info
+        span.label Name:
+        span.value #{name}
+      .info
+        span.label Email:
+        a(href=`mailto:${email}`) #{email}
+      .info
+        span.label Message:
+        .message-box #{message}

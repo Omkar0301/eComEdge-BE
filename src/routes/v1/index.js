@@ -7,6 +7,7 @@ const teamRoutes = require('./team.routes');
 const portfolioRoutes = require('./portfolio.routes');
 const testimonialRoutes = require('./testimonial.routes');
 const pricingRoutes = require('./pricing.routes');
+const supportRoutes = require('./support.routes');
 
 router.use('/auth', authRoutes);
 router.use('/users', userRoutes);
@@ -15,5 +16,6 @@ router.use('/teams', teamRoutes);
 router.use('/portfolio', portfolioRoutes);
 router.use('/testimonial', testimonialRoutes);
 router.use('/pricing', pricingRoutes);
+router.use('/support', supportRoutes);
 
 module.exports = router;

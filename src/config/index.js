@@ -23,6 +23,14 @@ const development = {
   cors: {
     origin: process.env.CORS_ORIGIN?.split(',') || '*',
     credentials: process.env.CORS_CREDENTIALS === 'true'
+  },
+  email: {
+    host: process.env.SMTP_HOST,
+    port: process.env.SMTP_PORT,
+    user: process.env.SMTP_USER,
+    pass: process.env.SMTP_PASS,
+    sender: process.env.SUPPORT_SENDER_EMAIL,
+    receiver: process.env.SUPPORT_RECEIVER_EMAIL
   }
 };
 
