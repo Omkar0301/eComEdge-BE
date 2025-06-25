@@ -10,5 +10,6 @@ db.url = config.db.url;
 db.User = require('./user.model');
 db.Feature = require('./feature.model');
 db.Team = require('./team.model');
+db.Portfolio = require('./portfolio.model');
 
 module.exports = db;
